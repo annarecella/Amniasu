@@ -95,6 +95,13 @@ export const NAVIGATION_CONFIG: NavigationSection[] = [
         icon: 'UserCheck',
         roles: ['mahasiswa'],
       },
+      {
+        id: 'student-mbkm',
+        label: 'MBKM',
+        to: '/mbkm',
+        icon: 'Compass',
+        roles: ['mahasiswa'],
+      },
     ],
   },
   {
@@ -155,6 +162,14 @@ export const NAVIGATION_CONFIG: NavigationSection[] = [
     title: 'Akademik',
     roles: ADMIN_ROLES,
     items: [
+      {
+        id: 'mbkm',
+        label: 'MBKM',
+        to: '/mbkm',
+        icon: 'Compass',
+        permission: 'mbkm.manage',
+        roles: ADMIN_ROLES,
+      },
       {
         id: 'perkuliahan-group',
         label: 'Perkuliahan',

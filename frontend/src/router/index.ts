@@ -37,6 +37,12 @@ const routes: RouteRecordRaw[] = [
         meta: { title: 'Dashboard' },
       },
       {
+        path: 'mbkm',
+        name: 'mbkm',
+        component: () => import('@/pages/mbkm/Index.vue'),
+        meta: { title: 'MBKM' },
+      },
+      {
         path: 'academic',
         name: 'academic',
         component: () => import('@/pages/academic/Index.vue'),

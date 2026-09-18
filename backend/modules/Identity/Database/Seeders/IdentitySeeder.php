@@ -68,6 +68,8 @@ class IdentitySeeder extends Seeder
             ['name' => 'schedules.delete', 'display_name' => 'Delete Schedule', 'group' => 'schedule', 'description' => 'Delete schedule'],
 
             // Enrollment / KRS permissions
+            ['name' => 'mbkm.manage', 'display_name' => 'Manage MBKM', 'group' => 'mbkm', 'description' => 'Manage MBKM programs, partners, selection, and recognition'],
+            ['name' => 'mbkm.review', 'display_name' => 'Review MBKM', 'group' => 'mbkm', 'description' => 'Review MBKM applications and activity reports'],
             ['name' => 'enrollments.view', 'display_name' => 'View Enrollments', 'group' => 'enrollment', 'description' => 'View student KRS enrollments'],
             ['name' => 'enrollments.create', 'display_name' => 'Create Enrollment', 'group' => 'enrollment', 'description' => 'Create student KRS'],
             ['name' => 'enrollments.update', 'display_name' => 'Update Enrollment', 'group' => 'enrollment', 'description' => 'Add/remove classes in KRS'],
@@ -195,6 +197,7 @@ class IdentitySeeder extends Seeder
             'attendance',
             'assessment',
             'grade',
+            'mbkm',
         ])->get();
         $adminAkademikRole->permissions()->sync($adminAkademikPermissions->pluck('id'));
 

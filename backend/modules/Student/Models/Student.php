@@ -105,4 +105,15 @@ class Student extends Model
     {
         return $this->hasOne(\Modules\Advising\Models\AcademicAdvisor::class, 'student_id')->where('status', 'active');
     }
+
+    /** MBKM applications belong to the existing student record. */
+    public function mbkmApplications(): HasMany
+    {
+        return $this->hasMany(\Modules\Mbkm\Models\MbkmApplication::class, 'student_id');
+    }
+
+    public function mbkmParticipants(): HasMany
+    {
+        return $this->hasMany(\Modules\Mbkm\Models\MbkmParticipant::class, 'student_id');
+    }
 }
